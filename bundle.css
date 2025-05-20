@@ -1,0 +1,37 @@
+:root {
+   color-scheme: light dark;
+}
+
+body {
+   font-family: sans-serif;
+   margin: auto;
+   max-width: 90vw;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+}
+
+li {
+   font-size: 120%;
+   margin-bottom: 10px;
+   box-sizing: border-box;
+}
+
+li a {
+   text-decoration: none;
+}
+
+li a:hover {
+   text-decoration: underline;
+}
+
+#link-section {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#link-section section {
+   padding-inline-end: 5vw;
+}

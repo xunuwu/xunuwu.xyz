@@ -1,0 +1,62 @@
+---
+socials:
+   discord: "https://discord.com/users/821827926504112129"
+   bluesky: "https://bsky.app/profile/owoxun.bsky.social"
+   roblox: "https://www.roblox.com/users/149009823"
+   last.fm: "https://www.last.fm/user/xunuwu"
+   github: "https://github.com/xunuwu"
+   steam: "https://steamcommunity.com/id/xunuwu/"
+
+# info field is optional, title and link are mandatory
+projects:
+   - title: nixos config
+     info: configuration files for all my nixos computers
+     link: https://github.com/xunuwu/nixos-config
+   - title: waymouse
+     info: a cli utility for simulating mouse inputs on wayland
+     link: https://github.com/xunuwu/waymouse
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xunuwu</title>
+    <link rel="stylesheet" href="/bundle.css">
+  </head>
+  <body>
+     <header>
+        <h1>xunuwu</h1>
+     </header>
+     <main>
+        <hr>
+        <p>
+         hi im xun 😼
+         <br>
+         i code and play video games sometimes (mostly roblox and fps games)
+        </p>
+        <div id="link-section">
+           <section>
+           <h2>projects</h2>
+              <ul>
+                 {% for item in projects %}
+                  <li>
+                     <a href="{{ item.link }}" {% if item.info %} title="{{ item.info }}" {% endif %} target="_blank" rel="noopener noreferrer">
+                        {{ item.title }}
+                     </a>
+                  </li>
+                 {% endfor %}
+              </ul>
+           </section>
+           <section>
+              <h2>socials</h2>
+              <ul>
+                 {% for link in socials %}
+                  <li><a href="{{ link[1] }}" target="_blank" rel="noopener noreferrer">{{ link[0] }}</a></li>
+                 {% endfor %}
+              </ul>
+           </section>
+        </div>
+     </main>
+  </body>
+</html>
