@@ -1,0 +1,12 @@
+[
+  {
+    "title": "nixos config",
+    "info": "configuration files for all my nixos computers",
+    "link": "https://github.com/xunuwu/nixos-config"
+  },
+  {
+    "title": "waymouse",
+    "info": "a cli utility for simulating mouse inputs on wayland",
+    "link": "https://github.com/xunuwu/waymouse"
+  }
+]
