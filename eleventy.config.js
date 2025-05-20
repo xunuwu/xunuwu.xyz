@@ -1,7 +1,7 @@
 export default function (eleventyConfig) {
-   eleventyConfig.addPassthroughCopy("bundle.css");
+   eleventyConfig.addPassthroughCopy("style.css");
 
-   eleventyConfig.addWatchTarget("bundle.css");
+   eleventyConfig.addWatchTarget("style.css");
 
    eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 }
