@@ -1,11 +1,23 @@
 ---
 socials:
-   discord: "https://discord.com/users/821827926504112129"
-   bluesky: "https://bsky.app/profile/owoxun.bsky.social"
-   roblox: "https://www.roblox.com/users/149009823"
-   last.fm: "https://www.last.fm/user/xunuwu"
-   github: "https://github.com/xunuwu"
-   steam: "https://steamcommunity.com/id/xunuwu/"
+   - name: discord
+     handle: "@xunuwu"
+     link: "https://discord.com/users/821827926504112129"
+   - name: bluesky
+     handle: owoxun.bsky.social
+     link: "https://bsky.app/profile/owoxun.bsky.social"
+   - name: roblox
+     handle: "@xunuwu"
+     link: "https://www.roblox.com/users/149009823"
+   - name: last.fm
+     handle: xunuwu
+     link: "https://www.last.fm/user/xunuwu"
+   - name: github
+     handle: xunuwu
+     link: "https://github.com/xunuwu"
+   - name: steam
+     handle: xunuwu
+     link: "https://steamcommunity.com/id/xunuwu/"
 
 # info field is optional, title and link are mandatory
 projects:
@@ -51,8 +63,8 @@ projects:
            <section>
               <h2>socials</h2>
               <ul>
-                 {% for link in socials %}
-                  <li><a href="{{ link[1] }}" target="_blank" rel="noopener noreferrer">{{ link[0] }}</a></li>
+                 {% for item in socials %}
+                  <li><a href="{{ item.link }}" target="_blank" {% if item.handle %} title="{{ item.handle }}" {% endif %} rel="noopener noreferrer">{{ item.name }}</a></li>
                  {% endfor %}
               </ul>
            </section>
