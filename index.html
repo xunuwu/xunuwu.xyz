@@ -20,18 +20,6 @@
         </p>
         <div id="link-section">
            <section>
-           <h2>projects</h2>
-              <ul>
-                 {% for item in projects %}
-                  <li>
-                     <a href="{{ item.link }}" {% if item.info %} title="{{ item.info }}" {% endif %} target="_blank" rel="noopener noreferrer">
-                        {{ item.title }}
-                     </a>
-                  </li>
-                 {% endfor %}
-              </ul>
-           </section>
-           <section>
               <h2>socials</h2>
               <ul>
                  {% for item in socials %}
